@@ -1,0 +1,80 @@
+.wrapper {
+  position: relative;
+
+  .legend {
+    position: absolute;
+    z-index: 1;
+    background-color: whitesmoke;
+    font-size: 0.75rem;
+    bottom: 4em;
+    left: 1em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    opacity: 0.8;
+
+    li {
+      display: flex;
+      gap: 0.4em;
+      align-items: center;
+    }
+
+    li::before {
+      content: "";
+      width: 1em;
+      height: 1em;
+    }
+
+    .PPMDreq::before {
+      background-color: blue;
+    }
+    .PPMDcontract::before {
+      background-color: #00008b;
+    }
+    .EXMDreq::before {
+      background-color: red;
+    }
+    .EXMDcontract::before {
+      background-color: #8b0000;
+    }
+    .PT::before {
+      background-color: purple;
+    }
+  }
+
+  .popup {
+    z-index: 1;
+
+    button {
+      font-size: 1.5rem;
+      margin: 0.25em;
+    }
+
+    .popupContent {
+      margin-right: 1em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+
+      h1 {
+        font-size: 1rem;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25em;
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
